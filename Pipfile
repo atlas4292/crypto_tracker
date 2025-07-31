@@ -11,9 +11,10 @@ seaborn = "*"
 plotly = "*"
 requests = "*"
 tweepy = "*"
-praw = "*"
 scipy = "*"
 statsmodels = "*"
+praw = "*"
+coingecko-sdk = "*"
 
 [dev-packages]
 
