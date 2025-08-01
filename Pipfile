@@ -21,6 +21,9 @@ pydantic = "*"
 sse-starlette = "*"
 uvicorn = "*"
 PyPDF2 = "*"
+beautifulsoup4 = "*"
+ollama = "*"
+langchain-ollama = "*"
 
 [dev-packages]
 

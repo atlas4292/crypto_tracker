@@ -15,3 +15,6 @@ pydantic
 sse-starlette
 uvicorn
 PyPDF2
+langchain-ollama
+ollama
+beautifulsoup4
