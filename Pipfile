@@ -10,11 +10,17 @@ matplotlib = "*"
 seaborn = "*"
 plotly = "*"
 requests = "*"
-tweepy = "*"
 scipy = "*"
 statsmodels = "*"
 praw = "*"
 coingecko-sdk = "*"
+tweepy = {extras = ["async"], version = "*"}
+neo4j = "*"
+fastapi = "*"
+pydantic = "*"
+sse-starlette = "*"
+uvicorn = "*"
+PyPDF2 = "*"
 
 [dev-packages]
 

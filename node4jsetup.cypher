@@ -1,0 +1,2 @@
+CREATE (:UserPost:Reddit {title: 'PostTitle', body: 'PostBody', score: 0, url: 'www', sentiment_rating: 0.0})
+CREATE (:UserPost:Twitter {title: 'PostTitle', body: 'PostBody', score: 0, url: 'www', sentiment_rating: 0.0})
