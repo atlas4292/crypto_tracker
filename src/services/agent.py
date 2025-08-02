@@ -24,6 +24,9 @@ def configure_llm_only_chain(llm):
     chain = chat_prompt | llm | StrOutputParser()
     return chain
 
+def configure_qa_chain():
+    pass
+
 def test_llm_only_chain(question):
     llm = ChatOllama(
         model="gemma3:12b",
@@ -49,6 +52,7 @@ messages = [
     ("human", "What is your favorite color?"),
 ]
 
+print("Asking LLM to translate the sentence...")
 ai_msg = llm.invoke(messages)
 print(ai_msg.content)
 
