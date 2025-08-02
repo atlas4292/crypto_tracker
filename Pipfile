@@ -24,6 +24,8 @@ PyPDF2 = "*"
 beautifulsoup4 = "*"
 ollama = "*"
 langchain-ollama = "*"
+langchain = "*"
+langchain-core = "*"
 
 [dev-packages]
 

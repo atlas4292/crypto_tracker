@@ -18,3 +18,5 @@ PyPDF2
 langchain-ollama
 ollama
 beautifulsoup4
+langchain
+langchain-core
