@@ -1,7 +1,6 @@
 def create_reddit_index(driver): 
     try:
         driver.query("CREATE INDEX IF NOT EXISTS idx_reddit_posts ON reddit_posts (id)")
-        driver.query("CREATE INDEX IF NOT EXISTS idx_reddit_subreddit ON reddit_subreddit (id)")
         driver.query("CREATE INDEX IF NOT EXISTS idx_reddit_comments ON reddit_comments (id)")
     except:
         pass
@@ -11,7 +10,6 @@ def create_reddit_constraints(driver):
     Create constraints for Reddit nodes to ensure uniqueness.
     """
     driver.query("CREATE CONSTRAINT IF NOT EXISTS FOR (n:RedditPost) REQUIRE n.id IS UNIQUE")
-    driver.query("CREATE CONSTRAINT IF NOT EXISTS FOR (n:Subreddit) REQUIRE n.name IS UNIQUE")
     driver.query("CREATE CONSTRAINT IF NOT EXISTS FOR (n:RedditComment) REQUIRE n.id IS UNIQUE")
 
 def create_twitter_index(driver):

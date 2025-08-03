@@ -19,5 +19,6 @@ langchain-ollama
 ollama
 beautifulsoup4
 langchain-neo4j
-langchain
 langchain-core
+langchain-openai
+langchain-huggingface

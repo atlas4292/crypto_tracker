@@ -25,8 +25,9 @@ beautifulsoup4 = "*"
 ollama = "*"
 langchain-ollama = "*"
 langchain-neo4j = "*"
-langchain = "*"
 langchain-core = "*"
+langchain-openai = "*"
+langchain-huggingface = "*"
 
 [dev-packages]
 
