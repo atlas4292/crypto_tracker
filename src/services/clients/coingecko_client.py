@@ -1,5 +1,5 @@
 from coingecko_sdk import Coingecko
-from utils import load_config
+from services.utils import load_config
 
 config = load_config()
 

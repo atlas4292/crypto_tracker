@@ -1,5 +1,5 @@
 import tweepy
-from utils import load_config
+from services.utils import load_config
 
 class TwitterClient:
     def __init__(self, config):

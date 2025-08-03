@@ -1,5 +1,5 @@
 import praw
-from utils import load_config
+from services.utils import load_config
 import uuid
 
 TEST_REDDIT_POST_URL = "https://www.reddit.com/r/funny/comments/3g1jfi/buttons/"

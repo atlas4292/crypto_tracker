@@ -2,9 +2,11 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from models.llm.type_constants import Embedding_Model_types
+from models.llm.type_constants import Embedding_Model_types, LLM_Model_types
 
-def create_embeddings_for_data(embedding_model_family_name, embedding_model_name, config={}):
+def create_embeddings_for_data(embedding_model_family_name: Embedding_Model_types, 
+                               embedding_model_name: LLM_Model_types, 
+                               config = {}):
     """
     Get embedding model based on the family name and model name.
 
@@ -19,19 +21,19 @@ def create_embeddings_for_data(embedding_model_family_name, embedding_model_name
         ValueError: If the embedding model family name is not recognized.
     """
     embedding_map = {
-        Embedding_Model_types.OPENAI.value: OpenAIEmbeddings(
-            model=embedding_model_name,
+        Embedding_Model_types.OPENAI: OpenAIEmbeddings(
+            model=embedding_model_name.value,
             base_url=config.get("base_url", "https://api.openai.com/v1"),
             model_kwargs={"temperature": config.get("temperature", 0.0)},
 
         ),
-        Embedding_Model_types.OLLAMA.value: OllamaEmbeddings(
-            model=embedding_model_name,
+        Embedding_Model_types.OLLAMA: OllamaEmbeddings(
+            model=embedding_model_name.value,
             base_url=config.get("base_url", "http://localhost:11434"),
             temperature=config.get("temperature", 0.0),            
         ),
-        Embedding_Model_types.HUGGINGFACE.value: HuggingFaceEmbeddings(
-            model_name=embedding_model_name,
+        Embedding_Model_types.HUGGINGFACE: HuggingFaceEmbeddings(
+            model_name=embedding_model_name.value,
             model_kwargs={"device": config.get("device", "cpu")},
         )
     }
