@@ -9,3 +9,6 @@ def load_config():
     
     with open(config_path, 'r') as file:
         return json.load(file)
+    
+def format_docs(docs):
+    return "\n\n".join(doc.page_content for doc in docs)
