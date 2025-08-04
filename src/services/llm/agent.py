@@ -3,7 +3,7 @@ from langchain_ollama import ChatOllama
 
 def test_llm(sentence_to_translate):
     llm = ChatOllama(
-        model="gemma3:12b",
+        model="qwen3:4b",
         temperature=0,
         # other params...
     )
@@ -17,5 +17,4 @@ def test_llm(sentence_to_translate):
     ]
 
     print("Asking LLM to translate the sentence...")
-    ai_msg = llm.invoke(messages)
-    print(ai_msg.content)
+    return llm.invoke(messages)

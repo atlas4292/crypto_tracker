@@ -13,7 +13,7 @@ class Embedding_Model_types(Enum):
 @unique
 class LLM_Model_types(Enum):
     GEMMA_12B = "Gemma3:12b"
-    QWEN_7B = "qwen2:7b"
+    QWEN_4B = "qwen3:4b"
     MISTRAL_NEMO = "mistral-nemo:latest"
     BAKLLAVA = "bakllava:latest"
     LLAMA_3_1_8B = "llama3.1:8b"

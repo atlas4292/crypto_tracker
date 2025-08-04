@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    image: auricaichatregistry.azurecr.io/cryptoanalysisproject:latest
+    ports:
+      - "8000:8000"  # FastAPI
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  ollama_data:
