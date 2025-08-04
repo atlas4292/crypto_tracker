@@ -12,7 +12,7 @@ def insert_reddit_post(driver, post):
     WITH c, comment
     UNWIND comment.replies AS reply
     MERGE (r:RedditComment {id: reply.id})
-    ON CREATE SET r.body = reply.body, r.author = reply.author, r.created_at = reply.created_at, r.embedding = reply.embedding
+    ON CREATE SET r.body = reply.body, r.author = reply.author, r.created_at = reply.created_at, r.embedding = reply.embedding, r.upvotes = reply.upvotes, r.downvotes = reply.downvotes, r.downvotes = reply.downvotes
     MERGE (c)-[:HAS_REPLY]->(r)
     RETURN p, s, c, r
     """

@@ -22,3 +22,4 @@ langchain-neo4j
 langchain-core
 langchain-openai
 langchain-huggingface
+opentelemetry-instrumentation-fastapi

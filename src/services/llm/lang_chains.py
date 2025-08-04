@@ -26,12 +26,10 @@ def configure_llm_only_chain(llm):
     chain = chat_prompt | llm | StrOutputParser()
     return chain
 
-def configure_qa_rag_chain(llm, embeddings, embeddings_store_url, username, password):
-    # RAG response
-    #   System: Always talk in pirate speech.
+def configure_reddit_rag_chain(llm, embeddings, embeddings_store_url, username, password):
     general_system_template = """ 
     Use the following pieces of context to answer the question at the end.
-    The context contains posts and comments from Reddit discussions about bitcoin price prediction.
+    The context contains posts and comments from Reddit discussions about bitcoin/cryptocurrency price prediction/events.
     You should prefer information from highly upvoted posts and comments with substantial discussion.
     Make sure to rely on information from the comments and analysis rather than just speculation to provide accurate responses.
     When you find particular post or comment in the context useful, make sure to cite it in the answer using the Reddit link.
