@@ -1,4 +1,4 @@
-FROM ollama/ollama:latest
+FROM ubuntu:latest
 
 # Make ARG available as ENV during runtime
 ENV MODEL_NAME=qwen3:4b
@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y \
 
 # Make Python 3.11 the default
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+
+# Install Ollama using official install script
+RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # Copy project files
 WORKDIR /app
